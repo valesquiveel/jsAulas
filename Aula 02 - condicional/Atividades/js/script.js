@@ -24,3 +24,9 @@ else {
     alert("Digite uma idade válida!")
     location.reload()
 }
+
+var novaIdade = confirm("Deseja informar a idade de outra pessoa?")
+
+if (novaIdade == true){
+    location.reload
+}
