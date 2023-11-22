@@ -5,7 +5,7 @@ var valorTotalConta = Number(prompt("Digite o valor total da conta:"));
 
 var totalCadaCliente = valorTotalConta / numeroClientes;
 
-alert(`o valor da conta para cada pessoa na mesa é de: R$${totalCadaCliente}`); 
+alert(`o valor da conta para cada pessoa na mesa é de: R$${totalCadaCliente.toFixed(2)}`); 
 
 // function calculeConta(numeroClientes, valorTotalConta){
 // alert("Calcule a sua conta:");
