@@ -6,6 +6,7 @@ while (multi <= 10) {
         console.log(`${multi} x ${contador} = ${multi * contador}`)
         contador++
     }
+    console.log("-------------")
     var contador = 0
     multi++
 }
