@@ -6,12 +6,15 @@ class Carro {
     velocidadeMaxima;
     velocidadeAtual;
     acelerar(kh){
-        if (kh < this.velocidadeMaxima) {
-            this.velocidadeAtual = this.velocidadeAtual + kh
-            return `Você aumentou ${kh} km/h da sua velocidade`
+        if (kh <= 0) {
+            return "Velocidade não permitida! Coloque uma aceleração acima de 0"
         } else {
-            this.velocidadeAtual = 213
-            return "O carro atingiu a velocidade máxima! Abaixe a velocidade!" 
+            if (kh + this.velocidadeAtual > this.velocidadeMaxima) {
+                return "O carro atingiu a velocidade máxima! Abaixe a velocidade!"
+            }else {
+                this.velocidadeAtual = this.velocidadeAtual + kh
+                return `Você aumentou ${kh} km/h || Sua velocidade é de ${this.velocidadeAtual} km/h`
+            }
         }
                  
     }
@@ -23,13 +26,9 @@ class Carro {
     }
 
     verVelocidade(){
-        if (this.velocidadeAtual > 213) {
-            this.velocidadeAtual = 213
-            return "O carro atingiu a velocidade máxima! Abaixe a velocidade!"
-        } else {
-            return `Sua velocidade atual é de ${this.velocidadeAtual} km/h`
-        }  
+        return `Sua velocidade atual é de ${this.velocidadeAtual} km/h`
     }
+    
 }
 
 var carro1 = new Carro();
