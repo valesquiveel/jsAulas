@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 6</title>
+
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,button {
+            height: 45px;
+            margin-bottom: 20px;
+        }
+
+        .post {
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: beige;
+        }
+    </style>
 </head>
 <body>
+    <h1>CRIE O SEU CARRO!</h1>
+    <form>
+        <input type="text" id="marca" placeholder="Marca">
+        <input type="text" id="modelo" placeholder="Modelo">
+        <input type="text" id="ano" placeholder="Ano">
+        <input type="color" id="cor" placeholder="Cor">
+        <input type="number" id="velocidadeMaxima" placeholder="Velocidade Máxima">
+        <button type="button" id="btnCarro">CRIAR CARRO</button>
+    </form>
+
+    <div id="resposta"></div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
