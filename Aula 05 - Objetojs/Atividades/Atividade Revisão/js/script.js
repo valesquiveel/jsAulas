@@ -9,6 +9,15 @@ class Filmes {
 var btnFilmes = document.querySelector("#btnFilmes")
 btnFilmes.addEventListener("click", addFilme)
 
+var btnApagar = document.querySelector(".apagar")
+btnApagar.addEventListener("click", apagarFilme)
+
+
+function apagarFilme() {
+    var add = document.querySelector(".add");
+    add.outerHTML = "";     
+}
+
 function addFilme() {
     let nomeInp = document.querySelector("#nome").value
     let descricaoInp = document.querySelector("#descricao").value
@@ -24,9 +33,11 @@ function addFilme() {
     filme.diretor = diretorInp
     filme.categoria = categoriaInp
 
-    resposta.innerHTML = `<div class="add"><h3>${filme.nome}</h3>
+    resposta.innerHTML += `<div class="add"><h3>${filme.nome}</h3>
     <p>Descrição: ${filme.descricao}</p>
     <p>Data: ${filme.data}</p>
     <p>Diretor: ${filme.diretor}</p>
-    <p>Categoria: ${filme.categoria}</p></div>`
+    <p>Categoria: ${filme.categoria}</p>
+    <div class="apagar" onclick="apagarFilme()"><button>X</button></div>    
+    </div>`
 }
